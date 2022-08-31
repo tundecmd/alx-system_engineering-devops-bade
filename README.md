@@ -1,1 +1,1 @@
-# alx-system_engineering-devops.Thank you, alx.
+# alx-system_engineering-devops
