@@ -11,7 +11,7 @@
  */
 int infinite_while(void)
 {
-	while(1)
+	while (1)
 	{
 		sleep(1);
 	}
@@ -30,6 +30,7 @@ int main(void)
 	for (i = 0; i < 5; i += 1)
 	{
 		pid_t pid;
+
 		pid = fork();
 		if (!pid)
 			return (1);
