@@ -4,32 +4,10 @@
 # Update the package manager cache
 sudo apt-get update
 
-# Upgrade the upgrade
-sudo apt-get install -y upgrade
-
 # Install nginx
-sudo apt-get -y install nginx
+sudo apt-get install -y nginx
 
-echo "Hello World!" > /var/www/html/index.html
-
-sudo service nginx stop
-
-new_config="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com permanent;"
-
-sudo sed -i "s/server_name _;/$new_config/" /etc/nginx/sites-enabled/default
-
-# Create an error page#!/usr/bin/env bash
-# This script installs nginx web server and start it listening on port 80
-
-# Update the package manager cache
-sudo apt-get update
-
-# Upgrade the upgrade
-sudo apt-get install -y upgrade
-
-# Install nginx
-sudo apt-get -y install nginx
-
+# Create an index page
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 new_config="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com permanent;"
