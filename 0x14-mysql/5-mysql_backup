@@ -8,7 +8,7 @@ timestamp=$(date +%d-%m-%Y)
 compressed_file = "$timestamp.tar.gz"
 
 # Generate the MySQL dump of all databases
-mysqldump -u root -p="$1" --all-databases > backup.sql
+mysqldump -u root -p"$1" --all-databases > backup.sql
 
 # Compress MySQL dump into a tar.gz achive
 tar -czvf "$compressed_file" backup.sql
