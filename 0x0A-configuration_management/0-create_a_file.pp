@@ -4,7 +4,7 @@ $filepath = '/tmp/school'
 $filemode = '0744'
 $fileowner = 'www-data'
 $filegroup = 'www-data'
-$filecontent = "I love Puppet\n"
+$filecontent = 'I love Puppet\n'
 
 file { $filepath:
   ensure  => 'file',
